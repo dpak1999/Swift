@@ -114,10 +114,11 @@ struct SettingsView: View {
                 )
                 
                 CustomListRowView(
-                    rowLabel: "Webiste",
+                    rowLabel: "Website",
                     rowIcon: "globe",
-                    rowContent: "https://dpak.today",
-                    rowTintColor: .indigo
+                    rowTintColor: .indigo,
+                    rowLinkLabel: "dpak1999",
+                    rowLinkDestination: "https://github.com/dpak1999"
                 )
             }
         }
