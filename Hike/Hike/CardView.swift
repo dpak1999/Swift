@@ -45,8 +45,13 @@ struct CardView: View {
                 ZStack {
                     Circle()
                         .fill(
-                            LinearGradient(colors: [Color("ColorIndigoMedium"), Color("ColorSalmonLight")], startPoint: .topLeading, 
-                                endPoint: .bottomTrailing)
+                            LinearGradient(
+                                colors: [
+                                    Color("ColorIndigoMedium"),
+                                    Color("ColorSalmonLight")],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
                         )
                         .frame(width: 256, height: 256)
                     
@@ -54,6 +59,32 @@ struct CardView: View {
                         .resizable()
                     .scaledToFit()
                 }
+                
+                Button {
+                    print("Button pressed")
+                    
+                } label: {
+                    Text("Explore More")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [
+                                    .customGreenLight,
+                                    .customGreenMedium
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                        .shadow(
+                            color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.25),
+                            radius: 0.25,
+                            x: 1,
+                            y: 2
+                        )
+                }
+                .buttonStyle(GradientButton())
             }
         }
         .frame(width: 320, height: 570)
